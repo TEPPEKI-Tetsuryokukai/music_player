@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高度な音楽プレイヤー</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="player">
+        <h1>音楽プレイヤー</h1>
+        <div class="controls">
+            <button id="prev">⏮️</button>
+            <button id="play">▶️</button>
+            <button id="pause" hidden>⏸️</button>
+            <button id="next">⏭️</button>
+            <button id="shuffle">🔀 オフ</button>
+        </div>
+        <div class="track-info">
+            <p id="track-title">選択された曲がありません</p>
+            <p id="track-time">0:00 / 0:00</p>
+        </div>
+        <input type="range" id="progress-bar" value="0" max="100">
+        <div class="additional-controls">
+            <label for="speed-control">速度:</label>
+            <input type="range" id="speed-control" value="1.0" min="0.5" max="2.0" step="0.1">
+        </div>
+        <div class="selectors">
+            <button id="select-files-btn">ファイルを選択</button>
+            <input type="file" id="file-selector" accept="audio/*" multiple hidden>
+            <button id="select-folder-btn">フォルダを選択</button>
+            <input type="file" id="folder-selector" webkitdirectory directory multiple hidden>
+        </div>
+        <ul id="playlist"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
